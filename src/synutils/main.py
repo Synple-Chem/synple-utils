@@ -6,7 +6,6 @@ import pandas as pd
 from rdkit.Chem import MolFromSmiles
 
 from synutils.featurizers import AVAILABLE_FEATURIZERS, get_featurizer
-from synutils.plotters import plot_projections
 
 
 def get_args() -> argparse.Namespace:

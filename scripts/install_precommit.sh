@@ -11,5 +11,7 @@ fi
 
 # Check pre-commit version
 pre-commit --version
+# Install the git hook scripts
+pre-commit install
 # Run pre-commit against all files
 pre-commit run --all-files
