@@ -1,9 +1,10 @@
-from typing import List, Callable, Tuple
+from typing import Callable, List, Tuple
 
-from rdkit.Chem import MolToSmiles, MolFromSmiles
+from rdkit.Chem import MolFromSmiles, MolToSmiles
 from vlib_enum.utils.enum_logger import get_logger
 
 LOGGER = get_logger()
+
 
 def ensure_readabilities_and_return_cano_smiles(
     mol_rprs: List[str],

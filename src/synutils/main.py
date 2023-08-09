@@ -1,13 +1,13 @@
-
 import argparse
 from pathlib import Path
 
 import numpy as np
-import pandas as pd 
+import pandas as pd
 from rdkit.Chem import MolFromSmiles
 
+from synutils.featurizers import AVAILABLE_FEATURIZERS, get_featurizer
 from synutils.plotters import plot_projections
-from synutils.featurizers import get_featurizer, AVAILABLE_FEATURIZERS
+
 
 def get_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -36,18 +36,19 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path.cwd()/"results",
+        default=Path.cwd() / "results",
         help="output directory",
     )
     return parser.parse_args()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     args = get_args()
     print(AVAILABLE_FEATURIZERS.keys())
     featurizer = get_featurizer(args.featurizer_name)
     # load data
     df = pd.read_csv(args.data_path)
-    data = np.array([featurizer.get_feat(MolFromSmiles(sm)) for sm in df['product']])
+    data = np.array([featurizer.get_feat(MolFromSmiles(sm)) for sm in df["product"]])
     # dim picker & get axes
     # axes = dim_picker.get_axis(data)
     # # plot

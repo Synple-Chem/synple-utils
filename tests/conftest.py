@@ -5,6 +5,7 @@ from typing import List
 
 import pytest
 
+
 @pytest.fixture
 def clean_smiles_list() -> List[str]:
     return [

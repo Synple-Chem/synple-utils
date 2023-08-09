@@ -1,8 +1,9 @@
 import abc
 from typing import Dict, Type
+
 import numpy as np
-from sklearn.decomposition import PCA, FastICA
 from sklearn.base import BaseEstimator
+from sklearn.decomposition import PCA, FastICA
 from umap import UMAP
 
 
