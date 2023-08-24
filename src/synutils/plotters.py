@@ -35,13 +35,13 @@ def plot_projections(
     """
     unique_labels = np.unique(cls_label)
     cmap = mpl.colormaps.get_cmap(cmap_name)
-    # cmap = cmap(np.linspace(0, 1, len(unique_labels)))
+    cmap = cmap(np.linspace(0, 1, len(unique_labels)))
     fig = plt.figure(figsize=(20 * (axes.shape[1] - 1), 20))
     for ii in range(1, axes.shape[1]):
         ax = fig.add_subplot(1, axes.shape[1] - 1, ii)
         for jj, ulabel in enumerate(unique_labels):
             idx = cls_label == ulabel
-            ax.scatter(axes[idx, 0], axes[idx, ii], s=5, color=cmap(jj), label=ulabel)
+            ax.scatter(axes[idx, 0], axes[idx, ii], s=5, color=cmap[jj], label=ulabel)
         ax.set_xlabel("axis 1")
         ax.set_ylabel(f"axis {ii+1}")
         ax.set_title(f"axis 1 vs axis {ii+1}")
