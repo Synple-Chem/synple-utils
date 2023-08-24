@@ -131,6 +131,7 @@ class UmapPicker(DimPicker):
         n_neighbors: int = 15,
         n_components: int = 3,
         min_dist: float = 0.1,
+        metric: str = "rogerstanimoto",
         random_state: int | None = None,
     ) -> None:
         """UMAP dimension picker
@@ -146,7 +147,9 @@ class UmapPicker(DimPicker):
         self.n_components = n_components
         self.min_dist = min_dist
         self.random_state = random_state
+        self.metric = metric
         self.model = UMAP(
+            metric=self.metric,
             n_neighbors=self.n_neighbors,
             n_components=self.n_components,
             min_dist=self.min_dist,
