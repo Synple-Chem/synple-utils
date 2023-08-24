@@ -41,7 +41,7 @@ def plot_projections(
         ax = fig.add_subplot(1, axes.shape[1] - 1, ii)
         for jj, ulabel in enumerate(unique_labels):
             idx = cls_label == ulabel
-            ax.scatter(axes[idx, 0], axes[idx, ii], s=3, color=cmap(jj), label=ulabel)
+            ax.scatter(axes[idx, 0], axes[idx, ii], s=5, color=cmap(jj), label=ulabel)
         ax.set_xlabel("axis 1")
         ax.set_ylabel(f"axis {ii+1}")
         ax.set_title(f"axis 1 vs axis {ii+1}")
