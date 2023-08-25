@@ -1,5 +1,7 @@
+import csv
 import time
 from functools import wraps
+from pathlib import Path
 
 from synutils.enum_logger import get_logger
 
@@ -20,3 +22,17 @@ def timeit(func):
         return result
 
     return timeit_wrapper
+
+
+def get_csv_line_num(fpath: Path):
+    """Get the number of lines in a file
+
+    Args:
+        fpath (Path): path to the file
+    """
+    with open(fpath, "r") as file:
+        csv_reader = csv.reader(file)
+        next(csv_reader)
+        for line_number, _ in enumerate(csv_reader, start=1):
+            pass
+    return line_number

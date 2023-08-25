@@ -1,9 +1,29 @@
 from typing import Callable, List, Tuple
 
 from rdkit.Chem import MolFromSmiles, MolToSmiles
-from vlib_enum.utils.enum_logger import get_logger
+
+from synutils.enum_logger import get_logger
 
 LOGGER = get_logger()
+
+
+def ensure_rdkit_redability(smiles: List[str]) -> List[int]:
+    """Ensure the smiles are readable by rdkit
+
+    Args:
+        smiles (List[str]): list of smiles
+
+    Returns:
+        List[int]: list of indices of readable smiles
+    """
+
+    readable_idx: List[int] = []
+    for ii, sm in enumerate(smiles):
+        if isinstance(sm, str):
+            mol = MolFromSmiles(sm)
+            if mol is not None:
+                readable_idx.append(ii)
+    return readable_idx
 
 
 def ensure_readabilities_and_return_cano_smiles(
