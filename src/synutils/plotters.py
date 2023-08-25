@@ -46,7 +46,12 @@ def plot_projections(
         for jj, ulabel in enumerate(unique_labels):
             idx = cls_label == ulabel
             ax.scatter(
-                axes[idx, 0], axes[idx, ii], s=marker_size, color=cmap[jj], label=ulabel
+                axes[idx, 0],
+                axes[idx, ii],
+                s=marker_size,
+                color=cmap[jj],
+                alpha=0.3,
+                label=ulabel,
             )
         ax.set_xlabel("axis 1")
         ax.set_ylabel(f"axis {ii+1}")
