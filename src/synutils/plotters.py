@@ -23,6 +23,7 @@ def plot_projections(
     cls_label: Optional[np.ndarray] = None,
     marker_size: int = 3,
     cmap_name: str = "Set3",
+    alpha: float = 0.3,
 ) -> plt.Figure:
     """plot projected axes of the datapoints
     each column is plotted to a subplot, versus the first column.
@@ -33,6 +34,7 @@ def plot_projections(
         cmap_name (str, optional): name of the colormap, defaults to "hsv".
             more colormaps can be found at https://matplotlib.org/stable/tutorials/colors/colormaps.html
         marker_size (int, optional): size of the marker, defaults to 3.
+        alpha (float, optional): alpha value of the marker, defaults to 0.3.
 
     Returns:
         plt.Figure: plot figure
@@ -50,7 +52,7 @@ def plot_projections(
                 axes[idx, ii],
                 s=marker_size,
                 color=cmap[jj],
-                alpha=0.3,
+                alpha=alpha,
                 label=ulabel,
             )
         ax.set_xlabel("axis 1")
