@@ -131,7 +131,7 @@ class UmapPicker(DimPicker):
         n_neighbors: int = 15,
         n_components: int = 3,
         min_dist: float = 0.1,
-        metric: str = "rogerstanimoto",
+        metric: str = "jaccard",
         random_state: int | None = None,
     ) -> None:
         """UMAP dimension picker
@@ -140,6 +140,7 @@ class UmapPicker(DimPicker):
             n_components (int, optional): number of components. Defaults to 3.
             n_neighbors (int, optional): number of neighbors. Defaults to 15.
             min_dist (float, optional): minimum distance. Defaults to 0.1.
+            metric (str, optional): metric. Defaults to "jaccard".
             random_state (int | None, optional): random state. Defaults to None.
         """
         super().__init__()
