@@ -65,17 +65,17 @@ def chunk_similarity_search(
     chunk: pd.DataFrame,
     candidates: pd.DataFrame,
     chunk_smiles_col: str = "product",
-    cand_mol_col: str = "mol",
+    cand_smiles_col: str = "smiles",
     buff_cpu: int = 1,
 ) -> Tuple[np.ndarray, np.ndarray]:
     """Similarity search of hit candidates
 
     Args:
-        chunk (pd.DataFrame): chunk of library in pd.DataFrame
-        candidates (pd.DataFrame): hit candidates in pd.DataFrame
+        chunk (pd.DataFrame): chunk of library in pd.DataFrame, chunk_smiles_col is required
+        candidates (pd.DataFrame): hit candidates in pd.DataFrame, cand_smiles_col is required
         chunk_smiles_col (str, optional): library chunk's column name of smiles.
             Defaults to "product".
-        cand_mol_col (str, optional): hit candidates' column name of mol.
+        cand_smiles_col (str, optional): hit candidates' column name of smiles.
         buff_cpu (int, optional): number of cpu to use. Defaults to 1.
 
     Returns:
@@ -87,7 +87,10 @@ def chunk_similarity_search(
         fps = pool.map(transform_to_fp, mols)
     fps = np.array(fps)
     LOGGER.info(f"There are {candidates.shape[0]} hit candidates left")
-    cand_fps = [transform_to_fp(mol) for mol in candidates[cand_mol_col]]
+    cand_fps = [
+        transform_to_fp(transform_to_mol(smiles))
+        for smiles in candidates[cand_smiles_col]
+    ]
     # calculate tanimoto similarity
     with mp.Pool(processes=mp.cpu_count() - buff_cpu) as pool:
         similarity_results = pool.map(partial(numba_tanimoto, fps=fps), cand_fps)
