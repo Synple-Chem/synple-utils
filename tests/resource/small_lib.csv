@@ -1,0 +1,11 @@
+bb1_parent_id,bb2_parent_id,product,bb1_smiles,bb2_smiles,rxn_0,rxn_1,bb1_price,bb1_anount,bb1_units,bb2_price,bb2_anount,bb2_units,inter_id,bb3_parent_id,inter_smiles,bb3_smiles,bb3_price,bb3_anount,bb3_units
+301062543,37084450.0,Cc1ccc2occ(C(=O)N3CCC(NC(=O)c4ccc(F)c(-c5ccc(Cl)cc5)c4)C3C)c(=O)c2c1,CC1C(N)CCN1C(=O)OC(C)(C)C,O=C(O)c1ccc(F)c(-c2ccc(Cl)cc2)c1,abf,abf,185.0,100.0,mg,165.0,1.0,g,68.0,905807.0,CC1NCCC1NC(=O)c1ccc(F)c(-c2ccc(Cl)cc2)c1,Cc1ccc2occ(C(=O)O)c(=O)c2c1,31.0,250.0,mg
+295586955,715254.0,COc1ccccc1Cn1cncc1C(=O)N1CC[C@H]2CN(C(=O)C3(c4ccc(F)cc4)CCCC3)C[C@H]2C1,CC(C)(C)OC(=O)N1CC[C@H]2CNC[C@H]2C1,O=C(O)C1(c2ccc(F)cc2)CCCC1,abf,abf,173.0,100.0,mg,14.0,250.0,mg,39.0,49830665.0,O=C(N1C[C@H]2CNCC[C@H]2C1)C1(c2ccc(F)cc2)CCCC1,COc1ccccc1Cn1cncc1C(=O)O,329.0,100.0,mg
+301215255,848191.0,Cc1cc(OC(C)(C)C(=O)N2C[C@H]3CCC[C@@H]2C3)cc(C)c1Cl,C1C[C@@H]2CN[C@H](C1)C2,Cc1cc(OC(C)(C)C(=O)O)cc(C)c1Cl,abf,,183.0,250.0,mg,274.0,1.0,g,,,,,,,
+303148016,38758125.0,Cc1ccc(-c2ccc(C(=O)N3CCC4(CC3)CC(C)N(C(=O)c3cn(-c5cccc(Br)c5)cn3)C4)nc2)c(C)c1,CC1CC2(CCN(C(=O)OC(C)(C)C)CC2)CN1,O=C(O)c1cn(-c2cccc(Br)c2)cn1,abf,abf,379.0,250.0,mg,108.0,100.0,mg,381.0,45493409.0,CC1CC2(CCNCC2)CN1C(=O)c1cn(-c2cccc(Br)c2)cn1,Cc1ccc(-c2ccc(C(=O)O)nc2)c(C)c1,165.0,1.0,g
+5856144,5850043.0,COC1CCC(N2CCN(c3cncc(C)n3)CC2)CC1,COC1CCC(=O)CC1,Cc1cncc(N2CCNCC2)n1,ra_k2,,15.0,100.0,mg,99.0,250.0,mg,,,,,,,
+6199790,37174003.0,CC1CC(C)CC(N2CCc3cc4c(cc3C2c2ccccc2)OCO4)C1,CC1CC(=O)CC(C)C1,c1ccc(C2NCCc3cc4c(cc32)OCO4)cc1,ra_k2,,8.0,250.0,mg,392.0,100.0,mg,,,,,,,
+303982924,847805.0,Cc1cc(OCc2ccc(C(=O)N[C@H]3CCC34CN(C(=O)Cc3ccc(S(N)(=O)=O)cc3)C4)cc2)cc(C)c1Cl,CC(C)(C)OC(=O)N1CC2(CC[C@@H]2N)C1,Cc1cc(OCc2ccc(C(=O)O)cc2)cc(C)c1Cl,abf,abf,617.0,100.0,mg,69.0,1.0,g,476.0,1495929.0,Cc1cc(OCc2ccc(C(=O)N[C@H]3CCC34CNC4)cc2)cc(C)c1Cl,NS(=O)(=O)c1ccc(CC(=O)O)cc1,66.0,250.0,mg
+301215255,848191.0,Cc1cc(OC(C)(C)C(=O)N2C[C@H]3CCC[C@@H]2C3)cc(C)c1Cl,C1C[C@@H]2CN[C@H](C1)C2,Cc1cc(OC(C)(C)C(=O)O)cc(C)c1Cl,abf,,183.0,250.0,mg,274.0,1.0,g,,,,,,,
+5856144,5850043.0,COC1CCC(N2CCN(c3cncc(C)n3)CC2)CC1,COC1CCC(=O)CC1,Cc1cncc(N2CCNCC2)n1,ra_k2,,15.0,100.0,mg,99.0,250.0,mg,,,,,,,
+313277536,50156296.0,Cc1ccc(Cl)c(Br)c1CNC(=O)c1cccc2ncc(O)cc12,Cc1ccc(Cl)c(Br)c1CN,O=C(O)c1cccc2ncc(O)cc12,abf,,10935.0,1.0,g,422.0,100.0,mg,,,,,,,
