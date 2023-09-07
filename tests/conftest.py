@@ -1,9 +1,12 @@
 from typing import List
 
-import pytest
+import pandas as pd
+from pytest import fixture
+
+from synutils.path import TEST_PATH
 
 
-@pytest.fixture
+@fixture
 def clean_smiles_list() -> List[str]:
     return [
         "O=C(O)c1ccccc1",
@@ -13,6 +16,16 @@ def clean_smiles_list() -> List[str]:
         "O=Cc1ccccc1O",
         "CCC(C=O)CC",
     ]
+
+
+@fixture
+def small_lib_df() -> pd.DataFrame:
+    return pd.read_csv(TEST_PATH / "resource" / "small_lib.csv")
+
+
+@fixture
+def hit_candidates_df() -> pd.DataFrame:
+    return pd.read_csv(TEST_PATH / "resource" / "hit_candidates.csv")
 
 
 # def temp_db(temp_path:Path):
