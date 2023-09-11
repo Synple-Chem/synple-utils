@@ -1,16 +1,18 @@
 .PHONY: test # these are not real files
 
+python=./env/bin/python
+
 all: env
 
 env:
 	conda env create -f ./environment.yaml -p ./env
-	./env/bin/python -m pip install -e .
+	${python} -m pip install -e .
 
 precommit:
 	bash ./scripts/install_precommit.sh
 
 python:
-	./env/bin/python
+	${python} ${ARGS}
 
-test: python
-	python -m pytest ./tests
+test:
+	${python} -m pytest ./tests -p no:warnings
