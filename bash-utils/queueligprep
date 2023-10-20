@@ -6,8 +6,8 @@
 # example crontab
 # * * * * * cd /path/to/log_out_dir && /path/to/queueligprep
 
-SCHRODINGER=/opt/schrodinger/suites2023-2
-WORKDIR=/Users/julian/SciAdv\ revisions
+SCHRODINGER=/opt/schrodinger/suites2023-3  # make sure this is the version you have installed
+WORKDIR=PATH_TO_YOUR_DIR  # remember to change to where your "queue.txt" is located
 nJobs=$("$SCHRODINGER/jobcontrol" -list | wc -l) || exit 1
 
 if [ "$nJobs" -lt 34 ]

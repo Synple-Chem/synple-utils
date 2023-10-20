@@ -6,8 +6,8 @@
 # example crontab:
 # * * * * * cd /path/to/output/dir && /path/to/queueqikprop
 
-SCHRODINGER=/opt/schrodinger/suites2023-2
-WORKDIR=/Users/julian/SciAdv\ revisions/qikprop_out
+SCHRODINGER=/opt/schrodinger/suites2023-3  # make sure this is the version you have installed
+WORKDIR=PATH_TO_YOUR_DIR  # change to where your "queue.txt" is located
 nJobs=$("$SCHRODINGER/jobcontrol" -list | wc -l) || exit 1
 
 if [ "$nJobs" -lt 19 ]
