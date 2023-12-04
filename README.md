@@ -39,6 +39,6 @@ This module contains functions to pick dimensions from featurised molecules. Cur
 [TeachOpenCADD Talktorials](https://projects.volkamerlab.org/teachopencadd/all_talktorials.html): Nice serise of tutorials for cheminformatics.
 
 ## Cheminformatics useful external links
-[openbabel](https://github.com/openbabel/openbabel0): Open Babel is a chemical toolbox designed to speak the many languages of chemical data.
+[openbabel](https://github.com/openbabel/openbabel): Open Babel is a chemical toolbox designed to speak the many languages of chemical data.
 
     obabel -icdx input.cdx -osmi -O output.smi
