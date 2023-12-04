@@ -15,6 +15,26 @@ Then, activate the environment:
 
     source activate ./env
 
+## Available modules
+### `synutils.featurisers`
+This module contains functions to featurise molecules. Currently, it supports the following featurisers:
+- fingerprint featurizers:
+    - `morgan`
+    - `morgan_count`
+    - `rdkit`
+    - `rdkit_count`
+    - `topological_torsion`
+    - `topological_torsion_count`
+- physichem featurisers:
+    - `rdkit_2d`
+- combined featurisers:
+    - `morgan_rdkit_2d`
+    - `morgan_count_rdkit_2d`
+### `synutils.dimension_pickers`
+This module contains functions to pick dimensions from featurised molecules. Currently, it supports the following dimension pickers:
+- `pca`
+- `ica`
+- `umap`
 ## Cheminoformatics useful tutorials
 [TeachOpenCADD Talktorials](https://projects.volkamerlab.org/teachopencadd/all_talktorials.html): Nice serise of tutorials for cheminformatics.
 
